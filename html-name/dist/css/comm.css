@@ -1,0 +1,10 @@
+@charset "UTF-8";
+@import url(reset.css);
+@import url(main.css);
+@import url(contents.css);
+
+/* layout */
+.wrap {
+  width: 1200px;
+  margin: 0 auto;
+}
