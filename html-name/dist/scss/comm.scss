@@ -19,23 +19,46 @@
     justify-content: space-between;
     height: 70px;
   }
+  .head__right {
+    display: flex;
+  }
   .lst-util {
     display: flex;
-    .btn-g {
+    li {
+      display: flex;
+    }
+    .btn-g,
+    a {
+      display: flex;
+      justify-self: center;
+      align-items: center;
       width: 40px;
       height: 70px;
+      .material-icons-outlined {
+        font-size: 26px;
+      }
       &::before {
         font-size: 20px;
         font-family: "Font Awesome 6 Free";
       }
     }
-    .btn-search::before {
-      content: "\f002";
-      font-weight: 900;
-    }
-    .btn-user::before {
-      content: "\f007";
-      font-weight: 400;
-    }
+    // font-awsome------------
+    // .btn-search::before {
+    //   content: "\f002";
+    //   font-weight: 900;
+    // }
+    // .btn-my::before {
+    //   content: "\f007";
+    //   font-weight: 400;
+    // }
+  }
+}
+.gnb-wrap {
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 70px;
   }
 }
