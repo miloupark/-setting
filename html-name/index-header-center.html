@@ -67,46 +67,59 @@
       <a href="#footer"><span>풋터 바로가기</span></a>
     </div>
     <div class="wrap">
-      <!-- logo 왼쪽 type -->
+      <!-- logo 가운데 type -->
       <header id="header" class="container">
         <!-- header 100%, inner px값 있음 -->
         <div class="inner">
           <h1 id="logo">
             <a href="#">logo</a>
           </h1>
-          <div class="head__right">
-            <div class="util">
-              <ul class="lst-util">
-                <li>
-                  <!-- a : 링크 연결 / button : 동작 처리 -->
-                  <!-- 링크 연결 없이 스크립트 처리 -->
-                  <a href="javascript:void(0)">
-                    <span class="material-icons-outlined"> menu </span>
-                  </a>
-                  <button class="btn-g btn-search">
-                    <span class="material-icons-outlined">search</span>
-                    <span class="blind">검색</span>
-                  </button>
-                </li>
-                <li>
-                  <a href="#" class="btn-g btn-my">
-                    <span class="material-icons-outlined">
-                      account_circle
-                    </span>
-                    <span class="blind">마이페이지</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <nav class="gnb-wrap">
-              <!-- 링크 연결 없이 스크립트 처리 -->
-              <a href="javascript:void(0)">
-                <span class="material-icons-outlined"> menu </span>
-              </a>
-            </nav>
+          <nav class="gnb-wrap">
+            <!-- 링크 연결 없이 스크립트 처리 -->
+            <a href="javascript:void(0)">
+              <span class="material-icons-outlined"> menu </span>
+            </a>
+          </nav>
+          <div class="util">
+            <ul class="lst-util">
+              <li>
+                <!-- a : 링크 연결 / button : 동작 처리 -->
+                <!-- 링크 연결 없이 스크립트 처리 -->
+                <a href="javascript:void(0)">
+                  <span class="material-icons-outlined"> language </span>
+                </a>
+              </li>
+              <li>
+                <button class="btn-g btn-search">
+                  <span class="material-icons-outlined">search</span>
+                  <span class="blind">검색</span>
+                </button>
+              </li>
+              <li>
+                <a href="#" class="btn-g btn-my">
+                  <span class="material-icons-outlined"> account_circle </span>
+                  <span class="blind">마이페이지</span>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </header>
+      <style>
+        #header {
+          position: relative;
+        }
+        #header #logo {
+          /* 로고 가운데 정렬 */
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          /* 가로 가운데 정렬이니까 50% */
+          transform: translate(-50%, -50%);
+          /* 로고의 -50%만큼 X축, -50%만큼 Y축으로 이동 */
+          /* 왜? 로고 기준이 왼쪽 축이기 때문에 */
+        }
+      </style>
       <div class="slide-wrap slide-name">slide</div>
       <main id="main" class="container">컨텐츠</main>
       <footer id="footer" class="container">풋터</footer>
