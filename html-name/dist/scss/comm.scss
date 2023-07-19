@@ -1,5 +1,6 @@
 @charset "UFT-8";
-@import "fonts", "reset", "main", "contents";
+@import "variables", "mixin", "fonts", "reset", "main", "contents";
+// variables 변수가 가장 맨 앞, 선언 후 변수 사용해야함
 
 // comm.css -
 // 공통요소 : 헤더, 풋터, 버튼, 아이콘, 박스
@@ -12,7 +13,8 @@
 
 // header
 #header {
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid $b;
+  // 컬러 _variables.scss 변수파일에 있음
   .inner {
     display: flex;
     align-items: center;
@@ -54,11 +56,25 @@
   }
 }
 .gnb-wrap {
-  a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 70px;
+  .input-burger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    // 안 보이게 보내버림
+  }
+  .label-burger {
+    .bar {
+      display: block;
+      // <span>는 inline요소 block으로 바꿔줌
+      width: 26px;
+      height: 2px;
+      background: #000;
+    }
+  }
+  #gnb {
+    display: none;
   }
 }
