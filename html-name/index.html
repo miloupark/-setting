@@ -101,10 +101,12 @@
               </ul>
             </div>
             <nav class="gnb-wrap">
-              <!-- 링크 연결 없이 스크립트 처리 -->
-              <a href="javascript:void(0)">
-                <span class="material-icons-outlined"> menu </span>
-              </a>
+              <input type="checkbox" name="gnbNav" id="gnbNav" />
+              <!-- gnbNav 카멜낙타표기법 중간에 대문자) -->
+              <label for="gnbNav">
+                <!-- (name,) id, for값이 같아야 함 -->
+                <span class="blind">전체 메뉴 보기</span>
+              </label>
             </nav>
           </div>
         </div>
