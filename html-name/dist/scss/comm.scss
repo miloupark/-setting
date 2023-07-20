@@ -7,8 +7,11 @@
 
 // 공통
 .container {
-  padding: 0 4%;
+  padding: 0 $bothMargin;
   // % : 가로사이즈 비례(반응형으로 움직일 시 고정이 안됨) / px : 고정
+}
+.bg-gray {
+  background: $gray-e;
 }
 
 // header
@@ -77,4 +80,94 @@
   #gnb {
     display: none;
   }
+}
+
+// main
+.sec-g {
+  // 공통디자인
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  .sec-tit {
+    font-size: 20px;
+    color: $b;
+  }
+  .sec-contents {
+    margin-top: 20px;
+  }
+}
+.sec-shopping {
+  .lst-shopping {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    li {
+      width: calc(50% - $spacingList / 2);
+      // 이미지를 2단으로 만들고 싶으면 50%
+      // 이미지 가운데 여백이 20px로 고정하고 싶으면 양쪽 이미지가 10px씩
+      // 여백 고정하고 싶지 않으면 width: 50%로 넣기 48%넣으면 여백생김
+      margin-bottom: $spacingList;
+      .thumb-shopping {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 200px;
+        border-radius: 4px;
+        &::after {
+          // 이미지 위로 떠야해서 after로 뒤에 만들어줌 검정색필터
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          border-radius: inherit;
+          border: 1px solid rgba($b 0.06);
+          background: rgba($b 0.03);
+        }
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 0% 50%;
+        transition: transform 0.3s;
+      }
+    }
+    // img width의 default가 100%
+    // width를 200px로 설정하면 이미지의 200px만 보여주기 때문에
+    // img태그를 따로 잡아서 100% 넣어줌
+    a {
+      &:hover {
+        img {
+          transform: scale(1.02);
+        }
+      }
+    }
+    // hover 했을 때 이미지 커짐
+
+    .txt-shopping {
+      margin-top: 10px;
+      .txt-shopping__tit {
+        display: block;
+        // strong태그는 인라인요소-> block으로 변경
+        margin-bottom: 5px;
+        font-size: 14px;
+        color: $titDefault;
+      }
+      .txt-shopping__desc {
+        font-size: 12px;
+        // color는 reset에 있는 default 컬러가 들어감
+      }
+    }
+  }
+}
+
+// footer
+#footer {
+  margin-bottom: 100px;
+  border-top: 1px solid #000;
+  // .inner {
+  //   border-top: 1px solid #000;
+  // }
 }
