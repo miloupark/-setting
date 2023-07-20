@@ -122,8 +122,8 @@
           right: 0;
           bottom: 0;
           border-radius: inherit;
-          border: 1px solid rgba($b 0.06);
-          background: rgba($b 0.03);
+          border: 1px solid rgba($b, 0.06);
+          background: rgba($b, 0.03);
         }
       }
       img {
@@ -150,7 +150,7 @@
       margin-top: 10px;
       .txt-shopping__tit {
         display: block;
-        // strong태그는 인라인요소-> block으로 변경
+        // strong태그 인라인-> block으로 변경
         margin-bottom: 5px;
         font-size: 14px;
         color: $titDefault;
