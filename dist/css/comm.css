@@ -282,7 +282,7 @@ legend {
 }
 
 .slide-intro {
-  margin-top: -70px;
+  transform: translateY(-70px);
 }
 .slide-intro .swiper-slide__txt {
   position: absolute;
@@ -300,7 +300,7 @@ legend {
   margin: 20px 0;
   color: #fff;
   font-size: 1rem;
-  opacity: 0.8;
+  opacity: 0.7;
 }
 .slide-intro .swiper-slide__txt a {
   display: inline-block;
@@ -314,84 +314,26 @@ legend {
   line-height: 2.1429rem;
 }
 
-.lst-thumb li {
-  margin-bottom: 3.5714rem;
+.list-event li {
+  margin-bottom: 50px;
 }
-.lst-thumb img {
+.list-event img {
   display: block;
   width: 100%;
   height: 300px;
-  margin-bottom: 1.4286rem;
+  margin-bottom: 20px;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: 50% 30%;
-     object-position: 50% 30%;
+  -o-object-position: 50% 20%;
+     object-position: 50% 20%;
 }
-.lst-thumb p {
+.list-event p {
   font-size: 1.1429rem;
   text-align: center;
 }
 
-.lst-thumb {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-.lst-thumb li {
-  width: calc(50% - 10px);
-  margin-bottom: 20px;
-}
-.lst-thumb li .thumb-shopping {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  border-radius: 0.2857rem;
-}
-.lst-thumb li .thumb-shopping::before {
-  content: "";
-  display: block;
-  height: 0;
-  padding-top: 100%;
-}
-.lst-thumb li .thumb-shopping img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: 0% 50%;
-     object-position: 0% 50%;
-  transition: transform 0.3s;
-}
-.lst-thumb li .thumb-shopping::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: inherit;
-  border: 0.0714rem solid rgba(0, 0, 0, 0.06);
-  background: rgba(0, 0, 0, 0.03);
-}
-.lst-thumb a:hover img {
-  transform: scale(1.02);
-}
-.lst-thumb .txt-shopping {
-  margin-top: 0.7143rem;
-}
-.lst-thumb .txt-shopping .txt-shopping__tit {
-  display: block;
-  margin-bottom: 0.3571rem;
-  font-size: 1rem;
-  color: #101010;
-}
-.lst-thumb .txt-shopping .txt-shopping__desc {
-  font-size: 0.8571rem;
+.contents {
+  height: 300px;
 }
 
 .wrap {
@@ -424,29 +366,31 @@ legend {
   display: flex;
   align-items: center;
 }
-#header .logo {
+
+#logo {
   position: relative;
   z-index: 1100;
 }
-#header .lst-util {
+
+.util__list {
   display: flex;
 }
-#header .lst-util li {
+.util__list li {
   display: flex;
 }
-#header .lst-util .btn-g,
-#header .lst-util a {
+.util__list .btn-g,
+.util__list a {
   display: flex;
   justify-self: center;
   align-items: center;
   width: 2.8571rem;
 }
-#header .lst-util .btn-g .material-icons-outlined,
-#header .lst-util a .material-icons-outlined {
+.util__list .btn-g .material-icons-outlined,
+.util__list a .material-icons-outlined {
   font-size: 1.8571rem;
 }
-#header .lst-util .btn-g::before,
-#header .lst-util a::before {
+.util__list .btn-g::before,
+.util__list a::before {
   font-size: 1.4286rem;
   font-family: "Font Awesome 6 Free";
 }
@@ -495,8 +439,7 @@ legend {
 .gnb-wrap .label-burger span:nth-child(3) {
   margin: 0.3571rem 0;
 }
-
-#gnb {
+.gnb-wrap #gnb {
   position: fixed;
   top: 0;
   right: -100%;
@@ -516,7 +459,6 @@ legend {
 }
 
 .swiper-slide {
-  position: relative;
   height: 100vh;
   text-align: center;
   font-size: 1.2857rem;
@@ -601,7 +543,7 @@ legend {
   background: rgba(0, 0, 0, 0.03);
 }
 .lst-thumb-two-column a:hover img {
-  transform: scale(1.02);
+  transform: scale(1.1);
 }
 .lst-thumb-two-column .txt-shopping {
   margin-top: 0.7143rem;

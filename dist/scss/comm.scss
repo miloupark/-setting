@@ -37,11 +37,12 @@
     display: flex;
     align-items: center;
   }
-  .logo {
+}
+  #logo {
     position: relative;
     z-index: 1100;
   }
-  .lst-util {
+  .util__list {
     display: flex;
     li {
       display: flex;
@@ -70,7 +71,6 @@
     //   font-weight: 400;
     // }
   }
-}
 .gnb-wrap {
   .input-burger {
     // 안 보이게 보내버림
@@ -131,7 +131,6 @@
       }
     }
   }
-}
 #gnb {
   // x가 되었을 때의 화면 (scroll이 내려가도 움직이면 안되는 화면)
   position: fixed;
@@ -145,15 +144,14 @@
   justify-content: center;
   align-items: center;
   transition: all 0.3s;
+  }
 }
 // slide
 .swiper {
   width: 100%;
   height: 100%;
 }
-
 .swiper-slide {
-  position: relative;
   height: 100vh;
   text-align: center;
   font-size: 1.2857rem;
@@ -169,14 +167,14 @@
     width: 100%;
     height: 100%;
     background: rgba($b, 0.5);
-}
+  }
 img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
   // object-fit 사용시 width, height 꼭 넣어야 함 넣어야 cover가 적용되니까
-}
+  }
 }
 
 // main
@@ -250,7 +248,7 @@ img {
   a {
     &:hover {
       img {
-        transform: scale(1.02);
+        transform: scale(1.1);
       }
     }
   }
