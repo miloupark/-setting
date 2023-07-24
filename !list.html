@@ -20,8 +20,10 @@
       crossorigin="anonymous"
     ></script>
     <style>
-      body {
-        overflow-y: scroll;
+      .wrap {
+        max-width: 1280px;
+        margin: auto;
+        padding: 20px 0;
       }
       .header {
         overflow: hidden;
@@ -75,7 +77,6 @@
       .table td {
         padding: 5px 8px 6px;
         font-family: sans-serif;
-        font-size: 12px;
         word-wrap: break-word;
         word-break: break-all;
         border: 1px solid #ddd;
@@ -114,7 +115,6 @@
 
       .table tr .category {
         padding: 6px 12px;
-        font-size: 13px;
         font-weight: bold;
         color: #17a2b8;
         text-align: left;
@@ -153,14 +153,16 @@
 
         .table tbody,
         .table tr {
-          display: block;
+          display: flex;
+          flex-direction: column;
           width: 100%;
           overflow: hidden;
+          border-bottom: 1px solid #ddd;
         }
 
         .table td {
-          width: 25%;
-          min-height: 28px;
+          width: 100%;
+          padding: 0 20px;
           word-break: keep-all;
           border-width: 0;
           float: left;
@@ -170,20 +172,9 @@
           display: none;
         }
 
-        .table td:nth-child(6) {
-          width: 70%;
-          height: 31px;
-          margin: 0 0 0 10%;
-          text-align: right;
-          border-width: 1px 0;
-          clear: both;
-        }
-        .table td:nth-child(8) {
-          width: 20%;
-          height: 31px;
-          border-width: 1px 0;
-        }
+        .table td:nth-child(6),
         .table td:nth-child(7),
+        .table td:nth-child(8),
         .table td:nth-child(9) {
           display: none;
         }
@@ -197,7 +188,7 @@
     </style>
   </head>
   <body>
-    <div class="container-fluid">
+    <div class="wrap">
       <div class="header">
         <h1 class="h2">프로젝트 반응형 코딩리스트</h1>
         <dl class="count">
@@ -260,12 +251,11 @@
                 <col style="width: 3%" />
                 <col />
                 <col />
-                <col />
-                <col />
-                <col style="width: 12%" />
+                <col style="width: 20%" />
+                <col style="width: 20%" />
+                <col style="width: 20%" />
                 <col style="width: 10%" />
                 <col style="width: 5%" />
-                <col style="width: 10%" />
               </colgroup>
               <thead>
                 <tr>
@@ -273,16 +263,15 @@
                   <th>1depth</th>
                   <th>2depth</th>
                   <th>3depth</th>
-                  <th>상세</th>
                   <th>파일명</th>
+                  <th>비고</th>
                   <th>Last update</th>
                   <th>Status</th>
-                  <th>비고</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td class="category" colspan="9">프로젝트</td>
+                  <td class="category" colspan="8">프로젝트</td>
                 </tr>
 
                 <tr>
@@ -290,86 +279,98 @@
                   <td>main</td>
                   <td></td>
                   <td></td>
-                  <td>gnb, nav, footer 추가</td>
                   <td>index.html</td>
+                  <td>gnb, nav, footer 추가</td>
                   <td>2023-01-06</td>
                   <td>완료</td>
-                  <td></td>
                 </tr>
                 <tr>
                   <td></td>
-                  <td>header</td>
+                  <td></td>
+                  <td>goods</td>
+                  <td>카테고리</td>
+                  <td>goods_category.html</td>
                   <td></td>
                   <td></td>
-                  <td>header 모음</td>
-                  <td>header.html</td>
-                  <td>2023-01-06</td>
-                  <td>완료</td>
-                  <td>모음이라 header가 2개 입니다.</td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td>무료강좌</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td>coursefree.html</td>
-                  <td>2023-01-06</td>
-                  <td>완료</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td>이벤트 · 혜택</td>
-                  <td>이벤트</td>
-                  <td>글목록</td>
-                  <td></td>
-                  <td>event-list.html</td>
-                  <td>2023-01-06</td>
-                  <td>완료</td>
                   <td></td>
                 </tr>
                 <tr>
                   <td></td>
                   <td></td>
                   <td></td>
-                  <td>Event</td>
-                  <td></td>
-                  <td>event-view.html</td>
-                  <td>2023-01-06</td>
-                  <td>완료</td>
-                  <td></td>
-                </tr>
-                <tr>
+                  <td>리스트</td>
+                  <td>goods_list.html</td>
                   <td></td>
                   <td></td>
-                  <td>당첨자 발표</td>
-                  <td>글목록</td>
-                  <td></td>
-                  <td>winner-list.html</td>
-                  <td>2023-01-06</td>
-                  <td>완료</td>
                   <td></td>
                 </tr>
                 <tr>
                   <td></td>
                   <td></td>
                   <td></td>
-                  <td>글목록 없음</td>
+                  <td>상세</td>
+                  <td>goods_view.html</td>
                   <td></td>
-                  <td>winner-list-none.html</td>
-                  <td>2023-01-06</td>
-                  <td>완료</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td>order</td>
+                  <td>장바구니</td>
+                  <td>cart.html</td>
+                  <td></td>
+                  <td></td>
                   <td></td>
                 </tr>
                 <tr>
                   <td></td>
                   <td></td>
                   <td></td>
-                  <td>글보기</td>
+                  <td>주문서 작성 / 결제</td>
+                  <tdrder>order.html</tdrder>
+                  <td>modal 포함</td>
                   <td></td>
-                  <td>winner-view.html</td>
-                  <td>2023-01-06</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td>mypage</td>
+                  <td></td>
+                  <td>index.html</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>내 정보 수정</td>
+                  <td>my_page.html</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>상품문의</td>
+                  <td>mypage_goods_qa.html</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>상품후기</td>
+                  <td>mypage_goods_review.html</td>
+                  <td></td>
                   <td></td>
                   <td></td>
                 </tr>
