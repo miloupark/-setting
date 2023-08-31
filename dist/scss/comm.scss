@@ -1,5 +1,5 @@
 @charset "UFT-8";
-@import "variables", "mixin", "fonts", "reset", "main", "contents";
+@import "variables", "mixin", "fonts", "reset";
 // variables 변수가 가장 맨 앞, 선언 후 변수 사용해야함
 
 // comm.css -
@@ -278,3 +278,6 @@ img {
   //   border-top: .0714rem solid #000;
   // }
 }
+
+@import "main", "contents";
+// 외부 파일일 경우 @import: url로 연결 
